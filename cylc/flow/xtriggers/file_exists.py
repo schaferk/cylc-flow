@@ -166,6 +166,7 @@ def file_exists(user=None, host='localhost', path=os.sep, point=-1,
     if ( found and results_dict['success']
          and num_expected is not None and len(items) != num_expected ):
         found = False
+        results_dict['success'] = False
 
     # Update the final dictionary that gets returned
     if found and results_dict['success']:
